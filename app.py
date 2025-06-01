@@ -3,8 +3,6 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Rota para a página inicial (index.html)
-
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -27,7 +25,7 @@ def form() -> str:
 def submit_form() -> str:
     nome: str = request.form['nome']
     email: str = request.form['email']
-    # nome= request.args.get('nome')
+    # nome = request.args.get('nome')
     # email = request.args.get('email')
 
     # Exibir os dados no console (ou guardar numa base de dados)
@@ -43,5 +41,5 @@ def multimedia() -> str:
 
 
 if __name__ == '__main__':
-    #app.run(debug=True)
-    app.run()
+    app.run(debug=True)
+    # app.run()

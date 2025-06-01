@@ -9,7 +9,7 @@ def form():
         nome: str = request.form['nome']
         email: str = request.form['email']
 
-        # Faça algo com os dados, como salvar em um banco de dados, enviar um email, etc.
+        # Para fazer algo com os dados, como salvar em um banco de dados, enviar um email, etc.
         return f'Obrigado, {nome}! Seu email {email} foi registrado.'
     else:
         return render_template('form.html')
